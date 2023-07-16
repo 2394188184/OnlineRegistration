@@ -1,0 +1,97 @@
+{
+	"pages": [
+		{
+			"path": "pages/index/index",
+			"style": {
+				"navigationBarTitleText": "首页",
+				"navigationStyle":"custom"
+			}
+		},
+		{
+			"path":"pages/hpv-vaccine/hpv-vaccine",
+			"style":{
+				"navigationBarTitleText":"宫颈癌疫苗在线预约"
+			}
+		},
+		{
+			"path":"pages/my-service/hpv-view/index",
+			"style":{
+				"navigationBarTitleText":"HPV疫苗预约订单"
+			}
+		},
+		{
+			"path":"pages/hpv-vaccine/hpv-buy",
+			"style":{
+				"navigationBarTitleText":"HPV套餐详情"
+			}
+		},
+		{
+			"path":"pages/my-service/xinguan/index",
+			"style":{
+				"navigationBarTitleText":"新冠疫苗订单",
+				"navigationBarBackgroundColor":"#ffffff"
+			}
+		},
+		{
+			"path":"pages/xinguan-vaccine/xinguan-vaccine",
+			"style":{
+				"navigationBarTitleText":"新冠疫苗预约"
+			}
+		},
+		{
+			"path":"pages/login-page/index",
+			"style":{
+				"navigationBarTitleText":"登录页面",
+				"navigationStyle":"custom"
+			}
+		},{
+			"path": "pages/registered/registered",
+			"style": {
+				"navigationBarTitleText": "挂号"
+			}
+		},{
+			"path": "pages/video/video",
+			"style": {
+				"navigationBarTitleText": "医师课堂"
+			}
+		},{ 
+			"path": "pages/mine/mine",
+			"style": {
+				"navigationBarTitleText": "我的"
+			}
+		}
+	],
+	"globalStyle": {
+		"navigationBarTextStyle": "black",
+		"navigationBarTitleText": "uni-app",
+		"navigationBarBackgroundColor": "#F8F8F8",
+		"backgroundColor": "#F8F8F8"
+	},
+	"tabBar": {
+		"color": "#7A7E83",
+		"selectedColor": "#3cc51f",
+		"borderStyle": "black",
+		"backgroundColor": "#ffffff",
+		"list": [{
+			"pagePath": "pages/index/index",
+			"iconPath": "static/index/home1.png",
+			"selectedIconPath": "static/index/home2.png",
+			"text": "首页"
+		}, {
+			"pagePath": "pages/registered/registered",
+			"iconPath": "static/registered/guahao1.png",
+			"selectedIconPath": "static/registered/guahao2.png",
+			"text": "挂号"
+		},{
+			"pagePath": "pages/video/video",
+			"iconPath": "static/video/video1.png",
+			"selectedIconPath": "static/video/video2.png",
+			"text": "医师课堂"
+		}, {
+			"pagePath": "pages/mine/mine",
+			"iconPath": "static/mine/mine1.png",
+			"selectedIconPath": "static/mine/mine2.png",
+			"text": "我的"
+		}]
+	}
+}
