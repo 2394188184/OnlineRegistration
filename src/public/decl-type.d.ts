@@ -123,3 +123,77 @@ export interface HpvuserOrder{
 export interface HpvCancelapi{
     _id:string
 }
+/* 
+    核酸数据
+*/
+interface Style{
+    desc:string[]
+    title:string
+}
+interface Data{
+    date:string
+    week:string
+}
+export interface NuataGet{
+    address: string
+    boon:string[]
+    date: Data[]
+    hospital: string
+    logo: string
+    name: string
+    phone:string
+    price: string
+    style: Style[]
+    _id?:string
+}
+//核酸检测提交
+export interface ResNuata{
+    name:string,
+    phone:string,
+    id_card:string,
+    time:string
+}
+//核酸检测订单
+export interface NuatauserOrder{
+    phy_name:string,
+    address:string,
+    name:string,
+    phone:string,
+    phy_time:string,
+    time:string,
+    price:number,
+    order_number:string,
+    cancel:boolean,
+    _id:string
+}
+//取消核酸预约订单
+export interface NuataCancel{
+    _id:string
+}
+//图文提交
+export interface Graphics{
+    illness:string,
+    guide:Boolean
+    ins_report:string[]
+    patient_id:string
+}
+//就诊人信息
+export interface GetPatient{
+    age:string,
+    born:string,
+    id_card:string,
+    name:string,
+    phone:string,
+    relation:string,
+    sex:string,
+    _id:string
+} 
+//提交就诊人
+export interface PatientRes{
+    name:string,
+    sex:string,
+    born:string,
+    relation:string,
+    id_card:string,
+    phone:string,
+}

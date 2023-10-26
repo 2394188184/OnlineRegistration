@@ -133,6 +133,16 @@ function navigatorX(index:number){
       url:'/pages/hpv-vaccine/hpv-vaccine'
     })
   }
+  if(index == 2){
+    uni.navigateTo({
+      url:'/pages/nucleic-cacid/index'
+    })
+  }
+  if(index == 3){
+    uni.navigateTo({
+      url:'/pages/graphics/index'
+    })
+  }
 }
 </script>
 <style lang="scss" scoped>

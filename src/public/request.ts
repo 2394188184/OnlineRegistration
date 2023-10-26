@@ -6,7 +6,7 @@ const baseUrl:string = 'https://meituan.thexxdd.cn/api/'  //默认地址
 //后端约定加'Basic'+将token进行base64位加密
 import { Base64 } from "js-base64";
 //获取定义接口类型
-import type {HpvCancelapi} from '@/public/decl-type' 
+import type {HpvCancelapi,ResNuata,NuataCancel,PatientRes,Graphics} from '@/public/decl-type' 
 function getToken():string{
     //将缓存中的token获取
     const token:string =  uni.getStorageSync('wxuser').user_Token || ''
@@ -130,6 +130,38 @@ const RequestApi = {
     /* 
        取消HPV预约    /hpvcancel
     */
-    HpvCancel:(data:HpvCancelapi) => request('hpvcancel','GET',data)
+    HpvCancel:(data:HpvCancelapi) => request('hpvcancel','GET',data),
+    /* 
+        获取核酸页面数据  /nuataget     
+    */
+    NuataGet:() => request('nuataget','GET',{}),
+    /* 
+        提交核酸检测预约  /resnuata  post
+    */
+    ResNuata:(data:ResNuata) => request('resnuata','POST',data),
+    /* 
+        核酸检测订单    GET   /nuatauser_order 
+    */
+    NuatauserOrder:()=>request('nuatauser_order','GET',{}),
+    /* 
+        取消核酸检测预约    GET    /nuatacancel?query= 
+    */
+    NuataCancel:(data:NuataCancel)=>request('nuatacancel','GET',data),
+    /* 
+        获取就诊人信息  GET  /get_patient      
+    */
+    GetPatient:()=>request('get_patient','GET',{}),
+    /* 
+        提交就诊人  POST  patient_res 
+    */
+    PatientRes:(data:PatientRes)=>request('patient_res','POST',data),
+    /* 
+        提交图文咨询 POST   graphics 
+    */
+    Graphics:(data:Graphics) =>request('graphics','POST',data) 
 }
-export {RequestApi}
+//上传图片地址
+let IMAGEURL = baseUrl+"upload_picture"
+//上传身份证地址
+let IDCARDURL = baseUrl+"ai_card "
+export {RequestApi,IMAGEURL,IDCARDURL}

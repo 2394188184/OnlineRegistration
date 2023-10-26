@@ -1,16 +1,41 @@
 {
 	"pages": [
 		{
-			"path":"pages/nucleic-acid/idnex.vue",
-			"style":{
-				"navigationBarTitleText":""
-			}
-		},
-		{
 			"path": "pages/index/index",
 			"style": {
 				"navigationBarTitleText": "首页",
 				"navigationStyle":"custom"
+			}
+		},
+		{
+			"path":"pages/graphics/index",
+			"style":{
+				"navigationBarTitleText":"图文咨询"
+			}
+		},
+		{
+			"path":"pages/my-service/my-patient/my-patient",
+			"style":{
+				"navigationBarTitleText":"我的就诊人"
+			}
+		},
+		{
+			"path":"pages/my-service/my-patient/add-patient",
+			"style":{
+				"navigationBarTitleText":"添加就诊人",
+				"navigationBarBackgroundColor":"#ffffff"
+			}
+		},
+		{
+			"path":"pages/my-service/nucleic-acid/index",
+			"style":{
+				"navigationBarTitleText":"核酸检测预约订单"
+			}
+		},
+		{
+			"path":"pages/nucleic-cacid/index",
+			"style":{
+				"navigationBarTitleText":"核酸检查预约"
 			}
 		},
 		{

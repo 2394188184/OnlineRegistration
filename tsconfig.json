@@ -1,14 +1,34 @@
+// {
+//   "extends": "@vue/tsconfig/tsconfig.json",
+//   "compilerOptions": {
+//     "sourceMap": true,
+//     //自动配置@会找src下的路径
+//     "baseUrl": "./",
+//     "paths": {
+//       "@/*": ["src/*"]
+//     },
+//     "lib": ["esnext", "dom"],
+//     "types": ["@dcloudio/types"]
+//   },
+//   "include": ["src/**/*.ts", "src/**/*.d.ts", "src/**/*.tsx", "src/**/*.vue"]
+// }
 {
-  "extends": "@vue/tsconfig/tsconfig.json",
   "compilerOptions": {
+    "target": "esnext",
+    "useDefineForClassFields": true,
+    "module": "esnext",
+    "moduleResolution": "node",
+    "strict": true,
+    "jsx": "preserve",
     "sourceMap": true,
-    //自动配置@会找src下的路径
+    "resolveJsonModule": true,
+    "esModuleInterop": true,
+    "lib": ["esnext", "dom"],
+    "types": ["@dcloudio/types"],
     "baseUrl": ".",
     "paths": {
-      "@/*": ["src/*"]
-    },
-    "lib": ["esnext", "dom"],
-    "types": ["@dcloudio/types"]
+      "@/*":["src/*"]
+    }
   },
   "include": ["src/**/*.ts", "src/**/*.d.ts", "src/**/*.tsx", "src/**/*.vue"]
 }
